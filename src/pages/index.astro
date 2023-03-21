@@ -1,43 +1,97 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Icon } from 'astro-icon'
+import NextIcon from '../components/next_logo.astro'
 ---
 
 <Layout title="Péter Szarvas">
-	<main>
-		<header class="w-fit mt-16 mx-auto text-white flex flex-col sm:flex-row sm:w-4/5 sm:gap-">
 
-      <div>
-        <p class="text-3xl mb-5">Welcome, I am</p>
-        <h1 class="
-          text-6xl mb-5 font-normal font-firasans text-transparent
-          bg-clip-text bg-gradient-to-br from-emerald-400 to-sky-400 w-fit
-        ">
-          Péter<br/>
-          Szarvas
-        </h1>
-        <p class="text-3xl">web developer</p>
+	<header class="w-fit mt-16 mx-auto text-white flex flex-col sm:flex-row sm:w-4/5 min-h-[100dvh]">
+
+    <div>
+      <p class="text-3xl mb-5">Welcome, I am</p>
+      <h1 class="
+        text-6xl mb-5 font-normal font-firasans text-transparent
+        bg-clip-text bg-gradient-to-br from-emerald-400 to-sky-400 w-fit
+      ">
+        Péter<br/>
+        Szarvas
+      </h1>
+      <p class="text-3xl">web developer</p>
+    </div>
+    
+    <nav class="mt-16 sm:mt-16 sm:w-full flex justify-end text-lg">
+      <ul class="text-right flex flex-col gap-2 font-firamono text-gray-700">
+        <li>
+          <a href="">
+            <span class="text-white">about</span>()</a>
+        </li>
+        <li>
+          <a href="">
+            &#123;"<span class="text-white">projects</span>"&#125;
+          </a>
+        </li>
+        <li>
+          <a href="">
+            &lt<span class="text-white">contact</span>/&gt;
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main>
+		<section class="flex flex-row min-h-[100dvh] w-full pr-3">
+      <h2 class="
+        text-3xl font-firamono text-gray-700 writing-v rotate-180 h-fit
+      " id="about">
+        #<span class="bg-clip-text bg-gradient-to-br from-orange-400 to-rose-400 text-transparent">about
+      </h2 >
+      <div class="flex flex-col gap-5">
+        <p class="text-md text-white text-justify w-full font-firasans">
+          I am a self-taught web developer, living in Hungary. currently working as a font-end dev, but stepping a foot into back-end as well.
+        </p>
+
+        <p class="text-md text-white text-justify w-full font-firasans"> 
+          I have diverse skills, but most importatly, I can learn the necessary new tools for the required solution.
+        </p>
+
+        <ul class="text-md flex flex-row text-gray-700 flex-wrap gap-2">
+          <li>/ <span class="text-white font-firamono">html</span></li>
+          <li>/ <span class="text-white font-firamono">css</span></li>
+          <li>/ <span class="text-white font-firamono">javascript</span></li>
+          <li>/ <span class="text-white font-firamono">typescript</span></li>
+          <li>/ <span class="text-white font-firamono">react</span></li>
+          <li>/ <span class="text-white font-firamono">next.js</span></li>
+          <li>/ <span class="text-white font-firamono">astro</span></li>
+          <li>/ <span class="text-white font-firamono">node.js</span></li>
+          <li>/ <span class="text-white font-firamono">git</span></li>
+          <li>/ <span class="text-white font-firamono">rest</span></li>
+          <li>/ <span class="text-white font-firamono">graphql</span></li>
+        </ul>
+
+        
       </div>
-			
-			<nav class="mt-16 sm:mt-0 sm:w-full flex items-center justify-end text-lg">
-				<ul class="text-right flex flex-col gap-2 font-firamono text-gray-700">
-          <li>
-            <a href="">
-              <span class="text-white">about</span>()</a>
-          </li>
-          <li>
-            <a href="">
-              &#123;"<span class="text-white">projects</span>"&#125;
-            </a>
-          </li>
-          <li>
-            <a href="">
-              &lt<span class="text-white">contact</span>/&gt;
-            </a>
-          </li>
-				</ul>
-			</nav>
+    </section>
 
-		</header>
-
+    <section class="flex flex-row min-h-[100dvh] w-full">
+      <h2 class="
+        text-3xl font-firamono text-gray-700 writing-v rotate-180 h-fit
+      " id="projects">
+        #<span class="bg-clip-text bg-gradient-to-br from-orange-400 to-rose-400 text-transparent">projects
+      </h2 >
+      <p class="text-md text-white text-justify w-full pr-2">
+        My projects goes here...
+      </p>
+   </section>
 	</main>
+
+
 </Layout>
+
+<style>
+  * {
+    /* outline: 1px solid red; */
+  }
+</style>
