@@ -1,0 +1,37 @@
+---
+import { Icon } from 'astro-icon';
+
+interface ProjectProps {
+  title: string;
+  description?: string;
+  image: string;
+  link?: string;
+  github?: string;
+  place?: string;
+}
+
+const { title, image, link, place} = Astro.props as ProjectProps;
+---
+
+<figure class="">
+  <div class="grayscale-60 w-fit">
+    <img src={image} alt={title} class=`${place || 'object-center'} w-72 h-44 object-cover  mb-2 border-2 border-gray-700`/>
+  </div>
+  <figcaption class="text-lg font-firasans text-white w-fit">
+    {title}
+  </figcaption>
+  {link && (
+    <div class="text-white w-72 flex flex-row items-top justify-start gap-1">
+      <Icon name="ic:outline-insert-link" class="w-6 h-6 inline-block text-gray-700" />
+      <a href={`https://${link}`} class="font-firamono" target="_blank" rel="noopener noreferrer">
+        {link}
+      </a>
+    </>
+  )}
+</figure>
+
+<style>
+  * {
+    /* outline: 1px solid lime; */
+  }
+</style>

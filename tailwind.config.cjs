@@ -7,7 +7,10 @@ module.exports = {
         'reactblue': '#61dafb',
         'gitred': '#e34f26',
         'astrored': '#FF5D01',
-      } 
+      },
+      filter: {
+        'grayscale-80': 'grayscale(80%)',
+      },
     },
 
 		fontFamily: {

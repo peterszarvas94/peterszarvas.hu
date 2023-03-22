@@ -1,18 +1,25 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Icon } from 'astro-icon'
-import NextIcon from '../components/next_logo.astro'
+import Project from '../components/Project.astro'
+import Szeremle from '../img/szeremletanc.png'
+import Hangos from '../img/hangos.png'
+import Pantlika from '../img/pantlika.png'
+import Sorting from '../img/sorting.png'
+import Dividends from '../img/dividends.png'
+import { Icon } from 'astro-icon';
 ---
 
 <Layout title="Péter Szarvas">
 
-	<header class="w-fit mt-16 mx-auto text-white flex flex-col sm:flex-row sm:w-4/5 min-h-[100dvh]">
+	<header class="
+    w-fit mt-16 mx-auto text-white flex flex-col min-h-[100dvh]
+    sm:flex-row sm:max-w-5xl sm:w-full sm:px-3
+  ">
 
     <div>
       <p class="text-3xl mb-5">Welcome, I am</p>
       <h1 class="
-        text-6xl mb-5 font-normal font-firasans text-transparent
-        bg-clip-text bg-gradient-to-br from-emerald-400 to-sky-400 w-fit
+        text-6xl mb-5 font-normal font-firasans w-fit ocean
       ">
         Péter<br/>
         Szarvas
@@ -42,49 +49,76 @@ import NextIcon from '../components/next_logo.astro'
   </header>
 
   <main>
-		<section class="flex flex-row min-h-[100dvh] w-full pr-3">
+		<section class="flex flex-row min-h-[100dvh] w-full max-w-5xl mx-auto pr-3 sm:gap-10">
       <h2 class="
         text-3xl font-firamono text-gray-700 writing-v rotate-180 h-fit
       " id="about">
-        #<span class="bg-clip-text bg-gradient-to-br from-orange-400 to-rose-400 text-transparent">about
+        #<span class="fire">about
       </h2 >
-      <div class="flex flex-col gap-5">
-        <p class="text-md text-white text-justify w-full font-firasans">
-          I am a self-taught web developer, living in Hungary. currently working as a font-end dev, but stepping a foot into back-end as well.
+      <div class="flex flex-col gap-10">
+        <p class="text-md sm:text-lg text-white text-justify w-full font-firasans">
+          I am a self-taught web developer, living in Hungary. Currently working as a font-end dev, but stepping a foot into back-end as well. I have diverse skills, but most importatly, I can learn and use the necessary tools, to reach the required solution. 
         </p>
 
-        <p class="text-md text-white text-justify w-full font-firasans"> 
-          I have diverse skills, but most importatly, I can learn the necessary new tools for the required solution.
-        </p>
-
-        <ul class="text-md flex flex-row text-gray-700 flex-wrap gap-2">
-          <li>/ <span class="text-white font-firamono">html</span></li>
-          <li>/ <span class="text-white font-firamono">css</span></li>
-          <li>/ <span class="text-white font-firamono">javascript</span></li>
-          <li>/ <span class="text-white font-firamono">typescript</span></li>
-          <li>/ <span class="text-white font-firamono">react</span></li>
-          <li>/ <span class="text-white font-firamono">next.js</span></li>
-          <li>/ <span class="text-white font-firamono">astro</span></li>
-          <li>/ <span class="text-white font-firamono">node.js</span></li>
-          <li>/ <span class="text-white font-firamono">git</span></li>
-          <li>/ <span class="text-white font-firamono">rest</span></li>
-          <li>/ <span class="text-white font-firamono">graphql</span></li>
+        <ul class="text-md sm:text-lg flex flex-row flex-wrap gap-2 font-firamono text-gray-700">
+          <li>/<span class="text-white">html<span></li>
+          <li>/<span class="text-white">css<span></li>
+          <li>/<span class="fire">typescript<span></li>
+          <li>/<span class="text-white">javascript<span></li>
+          <li>/<span class="text-white">node.js<span></li>
+          <li>/<span class="fire">react<span></li>
+          <li>/<span class="text-white">astro<span></li>
+          <li>/<span class="fire">next.js<span></li>
+          <li>/<span class="text-white">git<span></li>
+          <li>/<span class="text-white">rest<span></li>
+          <li>/<span class="text-white">graphql<span></li>
+          <li>/<span class="text-white">trpc<span></li>
         </ul>
 
-        
       </div>
     </section>
 
-    <section class="flex flex-row min-h-[100dvh] w-full">
+    <section class="flex flex-row min-h-[100dvh] w-full max-w-5xl mx-auto pr-3 sm:gap-10">
       <h2 class="
         text-3xl font-firamono text-gray-700 writing-v rotate-180 h-fit
       " id="projects">
-        #<span class="bg-clip-text bg-gradient-to-br from-orange-400 to-rose-400 text-transparent">projects
+        #<span class="fire">projects
       </h2 >
-      <p class="text-md text-white text-justify w-full pr-2">
-        My projects goes here...
-      </p>
-   </section>
+      <div class="grid grid-cols-1 gap-x-2 gap-y-10 h-fit mx-auto sm:grid-cols-2 lg:grid-cols-3">
+        <Project title="Dancegroup's site" image={Szeremle} link="szeremletanc.hu" place="object-top"/>
+        <Project title="Singing studio's site" image={Hangos} link="hangosstudio.hu"/>
+        <Project title="Music band's site" image={Pantlika} link="pantlikazenekar.hu"/>
+        <Project title="Sorting algorithms" image={Sorting} link="tender-booth-f0f6bb.netlify.app" place="object-left-top"/>
+        <Project title="Dividend checker" image={Dividends} link="wonderful-yalow-9a6209.netlify.app" place="object-top"/>
+      </div>
+    </section>
+    
+    <section class="flex flex-row justify-between min-h-[100dvh] w-full max-w-5xl mx-auto mt-44">
+      <h2 class="
+        text-3xl font-firamono text-gray-700 writing-v rotate-180 h-fit
+      " id="projects">
+        #<span class="fire">contact
+      </h2 >
+      <ul class="text-white w-80 flex flex-col gap-2">
+        <li class="flex flex-row items-center justify-end gap-1">
+          <a href="mailto:contact@peterszarvas.hu" target="_blank" rel="noopener noreferrer">contact@peterszarvas.hu</a>
+          <Icon name="ic:round-mail" class="h-6 w-6 text-gray-700"/>
+        </li>
+        <li class="flex flex-row items-center justify-end gap-1">
+          <a href="https://github.com/peterszarvas94" target="_blank" rel="noopener noreferrer">github.com/peterszarvas94</a>
+          <Icon name="mdi:github" class="h-6 w-6 text-gray-700"/>
+        </li>
+        <li class="flex flex-row items-center justify-end gap-1">
+          <a href="https://www.linkedin.com/in/peterszarvas94/" target="_blank" rel="noopener noreferrer">linkedin.com/in/peterszarvas94</a>
+          <Icon name="mdi:linkedin" class="h-6 w-6 text-gray-700"/>
+        </li>
+        <li class="flex flex-row items-center justify-end gap-1">
+          <a href="tel:+36202746444" target="_blank" rel="noopener noreferrer">+36 20 274 6444</a>
+          <Icon name="mdi:telephone" class="h-6 w-6 text-gray-700"/>
+        </li>
+      </ul>
+    </section>
+    
 	</main>
 
 
@@ -92,6 +126,6 @@ import NextIcon from '../components/next_logo.astro'
 
 <style>
   * {
-    /* outline: 1px solid red; */
+    /*limetline: 1px solid lime; */
   }
 </style>
