@@ -11,6 +11,9 @@ module.exports = {
       filter: {
         'grayscale-80': 'grayscale(80%)',
       },
+      flex: {
+        '100': '1 0 100%',
+      }
     },
 
 		fontFamily: {

@@ -1,0 +1,16 @@
+---
+import { Icon } from 'astro-icon';
+
+interface LinkProps {
+  url: string;
+}
+
+const {url}  = Astro.props as LinkProps;
+---
+
+<div class="text-white flex flex-row items-top justify-start gap-1">
+  <Icon name="ic:outline-insert-link" class="w-6 h-6 inline-block text-gray-700" />
+  <a href={`https://${url}`} class="font-firamono" target="_blank" rel="noopener noreferrer">
+    {url}
+  </a>
+</div>

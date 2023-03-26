@@ -4,23 +4,17 @@ import Project from '../components/Project.astro'
 import Szeremle from '../img/szeremletanc.png'
 import Hangos from '../img/hangos.png'
 import Pantlika from '../img/pantlika.png'
-import Sorting from '../img/sorting.png'
-import Dividends from '../img/dividends.png'
+//import Sorting from '../img/sorting.png'
+//import Dividends from '../img/dividends.png'
 import { Icon } from 'astro-icon';
 ---
-
 <Layout title="Péter Szarvas">
 
-	<header class="
-    w-fit mt-16 mx-auto text-white flex flex-col min-h-[100dvh]
-    sm:flex-row sm:max-w-5xl sm:w-full sm:px-3
-  ">
+	<header class="w-fit mt-16 mx-auto text-white flex flex-col min-h-[100dvh] sm:flex-row sm:max-w-5xl sm:w-full sm:px-3">
 
     <div>
       <p class="text-3xl mb-5">Welcome, I am</p>
-      <h1 class="
-        text-6xl mb-5 font-normal font-firasans w-fit ocean
-      ">
+      <h1 class="text-6xl mb-5 font-normal font-firasans w-fit ocean">
         Péter<br/>
         Szarvas
       </h1>
@@ -30,16 +24,17 @@ import { Icon } from 'astro-icon';
     <nav class="mt-16 sm:mt-16 sm:w-full flex justify-end text-lg">
       <ul class="text-right flex flex-col gap-2 font-firamono text-gray-700">
         <li>
-          <a href="">
-            <span class="text-white">about</span>()</a>
+          <a href="" id="nav_about" data-section="about">
+            <span class="text-white">about</span>()
+          </a>
         </li>
         <li>
-          <a href="">
+          <a href="" id="nav_projects" data-section="projects">
             &#123;"<span class="text-white">projects</span>"&#125;
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="" id="nav_contact" data-section="contact">
             &lt<span class="text-white">contact</span>/&gt;
           </a>
         </li>
@@ -49,11 +44,9 @@ import { Icon } from 'astro-icon';
   </header>
 
   <main>
-		<section class="flex flex-row min-h-[100dvh] w-full max-w-5xl mx-auto pr-3 sm:gap-10">
-      <h2 class="
-        text-3xl font-firamono text-gray-700 writing-v rotate-180 h-fit
-      " id="about">
-        #<span class="fire">about
+		<section class="flex flex-row mb-64 w-full max-w-5xl mx-auto pr-3 sm:gap-10 sm:pl-3">
+      <h2 class="text-3xl font-firamono fire writing-v rotate-180 h-fit" id="about">
+        <span class="text-gray-700">#</span>about
       </h2 >
       <div class="flex flex-col gap-10">
         <p class="text-md sm:text-lg text-white text-justify w-full font-firasans">
@@ -78,28 +71,25 @@ import { Icon } from 'astro-icon';
       </div>
     </section>
 
-    <section class="flex flex-row min-h-[100dvh] w-full max-w-5xl mx-auto pr-3 sm:gap-10">
-      <h2 class="
-        text-3xl font-firamono text-gray-700 writing-v rotate-180 h-fit
-      " id="projects">
-        #<span class="fire">projects
+    <section class="flex flex-row mb-64 w-full max-w-5xl mx-auto pr-3 sm:gap-10 sm:pl-3">
+      <h2 class="text-3xl font-firamono fire writing-v rotate-180 h-fit" id="projects">
+        <span class="text-gray-700">#</span>projects
       </h2 >
-      <div class="grid grid-cols-1 gap-x-2 gap-y-10 h-fit mx-auto sm:grid-cols-2 lg:grid-cols-3">
-        <Project title="Dancegroup's site" image={Szeremle} link="szeremletanc.hu" place="object-top"/>
-        <Project title="Singing studio's site" image={Hangos} link="hangosstudio.hu"/>
-        <Project title="Music band's site" image={Pantlika} link="pantlikazenekar.hu"/>
-        <Project title="Sorting algorithms" image={Sorting} link="tender-booth-f0f6bb.netlify.app" place="object-left-top"/>
-        <Project title="Dividend checker" image={Dividends} link="wonderful-yalow-9a6209.netlify.app" place="object-top"/>
+      <!--<div class="grid grid-cols-1 gap-x-2 gap-y-10 h-fit mx-auto sm:grid-cols-2 lg:grid-cols-3">-->
+      <div class="mx-auto grid gap-5 grid-cols-1 sm:grid-cols-2">
+        <Project title="Dancegroup's site" image={Szeremle} url="szeremletanc.hu" place="object-top"/>
+        <Project title="Singing studio's site" image={Hangos} url="hangosstudio.hu"/>
+        <Project title="Music band's site" image={Pantlika} url="pantlikazenekar.hu"/>
+        <!--<Project title="Sorting algorithms" image={Sorting} url="tender-booth-f0f6bb.netlify.app" place="object-left-top"/>-->
+        <!--<Project title="Dividend checker" image={Dividends} url="wonderful-yalow-9a6209.netlify.app" place="object-top"/>-->
       </div>
     </section>
     
-    <section class="flex flex-row justify-between min-h-[100dvh] w-full max-w-5xl mx-auto mt-44">
-      <h2 class="
-        text-3xl font-firamono text-gray-700 writing-v rotate-180 h-fit
-      " id="projects">
-        #<span class="fire">contact
+    <section class="flex flex-row min-h-[calc(100dvh-12px)] w-full max-w-5xl mx-auto pr-3 sm:gap-10 sm:pl-3">
+      <h2 class="text-3xl font-firamono fire writing-v rotate-180 h-fit" id="contact">
+        <span class="text-gray-700">#</span>contact
       </h2 >
-      <ul class="text-white w-80 flex flex-col gap-2">
+      <ul class="text-white flex flex-col gap-2 w-full">
         <li class="flex flex-row items-center justify-end gap-1">
           <a href="mailto:contact@peterszarvas.hu" target="_blank" rel="noopener noreferrer">contact@peterszarvas.hu</a>
           <Icon name="ic:round-mail" class="h-6 w-6 text-gray-700"/>
@@ -124,8 +114,43 @@ import { Icon } from 'astro-icon';
 
 </Layout>
 
-<style>
+<style is:global>
   * {
-    /*limetline: 1px solid lime; */
+    /*outline: 1px solid lime;*/
   }
 </style>
+
+<script>
+  function getElementTop(id: string) : number {
+    const el = document.getElementById(id);
+    if (!el) return 0;
+  
+    const rect = el.getBoundingClientRect();
+    return rect.top;
+  }
+  
+  function scrollToElement(id: string) : void {
+    const el = document.getElementById(id);
+    if (!el) return;
+  
+    window.scrollTo({
+      top: getElementTop(id) + window.pageYOffset - 12,
+      behavior: "smooth"
+    });
+    return;
+  }
+  
+  const anchors = document.getElementsByTagName("a");
+  const navAnchors = Array.from(anchors).filter((el: HTMLElement) => el.id.startsWith("nav"))
+  navAnchors.forEach((el: HTMLElement) => el.addEventListener('click', (event: MouseEvent) => {
+    event.preventDefault();
+    const target = event.currentTarget as HTMLElement;
+    if (!target) return;
+
+    const section = target.dataset.section
+    if (!section) return;
+
+    scrollToElement(section);
+  }))  
+
+</script>
