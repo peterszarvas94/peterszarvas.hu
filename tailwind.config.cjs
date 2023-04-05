@@ -11,6 +11,9 @@ module.exports = {
       filter: {
         'grayscale-80': 'grayscale(80%)',
       },
+      gridTemplateColumns: {
+        'auto-1fr': 'auto 1fr',
+      }
     },
 
 		fontFamily: {
