@@ -1,11 +1,11 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from '../layouts/main.astro'
 import Project from '../components/Project.astro'
 import Szeremle from '../img/szeremletanc.png'
 import Hangos from '../img/hangos.png'
 import Pantlika from '../img/pantlika.png'
 import Sorting from '../img/sorting.png'
-import { Icon } from 'astro-icon';
+import { Icon } from 'astro-icon'
 ---
 <Layout title="Péter Szarvas">
 
@@ -145,6 +145,29 @@ import { Icon } from 'astro-icon';
   * {
     /*outline: 1px solid #333;*/
   }
+
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  @layer components {
+    .writing-v {
+      writing-mode: vertical-rl;
+    }
+
+    .grayscale-60 {
+      filter: grayscale(60%);
+    }
+
+    .fire {
+      @apply text-transparent bg-clip-text bg-gradient-to-br from-orange-400 to-rose-400;
+    }
+
+    .ocean {
+      @apply text-transparent bg-clip-text bg-gradient-to-br from-emerald-400 to-sky-400;
+    }
+  }
+
 </style>
 
 <script>
