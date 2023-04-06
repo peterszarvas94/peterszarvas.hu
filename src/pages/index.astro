@@ -12,12 +12,16 @@ import { Icon } from 'astro-icon'
   <header class="h-screen flex items-center" id="header">
     <div class="w-fit mx-auto text-white flex flex-col justify-between h-full max-h-96">
       <div>
-        <p class="text-3xl mb-5">Welcome, I am</p>
-        <h1 class="text-6xl mb-5 font-normal font-firasans sticky w-fit ocean">
+        <p class="text-3xl sm:text-4xl mb-5">Welcome, I am</p>
+        <h1 data-text="Péter Szarvas" class="text-6xl sm:text-7xl mb-5 font-light font-firasans w-fit ocean
+          relative stroke-2-transparent
+          after:content-[attr(data-text)] after:text-zinc-900 after:absolute after:left-0 after:top-0 after:animate-fill
+          hover:after:animation-stop
+        ">
           Péter<br/>
           Szarvas
         </h1>
-        <p class="text-3xl">web developer</p>
+        <p class="text-3xl sm:text-4xl">web developer</p>
       </div>
 
       <div class="flex flex-col items-center">
@@ -151,14 +155,6 @@ import { Icon } from 'astro-icon'
   @tailwind utilities;
 
   @layer components {
-    .writing-v {
-      writing-mode: vertical-rl;
-    }
-
-    .grayscale-60 {
-      filter: grayscale(60%);
-    }
-
     .fire {
       @apply text-transparent bg-clip-text bg-gradient-to-br from-orange-400 to-rose-400;
     }
