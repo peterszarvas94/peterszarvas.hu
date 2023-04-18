@@ -1,0 +1,174 @@
+---
+import Link from "../components/resume/Link.astro";
+import Article from "../components/resume/Article.astro";
+import ContactItem from "../components/resume/ContactItem.astro";
+import H2 from "../components/resume/H2.astro";
+import H3 from "../components/resume/H3.astro";
+import List from "../components/resume/List.astro";
+import Section from "../components/resume/Section.astro";
+import Strong from "../components/resume/Strong.astro";
+import Layout from "../layouts/resume.astro";
+import Phone from "../components/icons/phone.astro";
+import Linkedin from "../components/icons/linkedin.astro";
+import Github from "../components/icons/github.astro";
+import Globe from "../components/icons/globe.astro";
+import Mail from "../components/icons/mail.astro";
+import Icon from "../components/resume/Icon.astro";
+import SkillItem from "../components/resume/SkillItem.astro";
+---
+
+<Layout title="Péter Szarvas - Resume">
+  <main
+    class="min-h-[1120px] max-w-[794px] mx-auto outline outline-current outline-0 p-10 font-anuphan"
+  >
+    <div class="flex flex-wrap w-full">
+      <div class="grow">
+        <h1 class="text-3xl text-gray-700 uppercase font-bold">
+          Péter Szarvas
+        </h1>
+        <p class="text-2xl pb-2">frontend developer</p>
+      </div>
+
+      <ul class="grow">
+        <ContactItem text="+36 20 2746444" href="tel:+36202746444">
+          <Icon appendClass="-rotate-90">
+            <Phone />
+          </Icon>
+        </ContactItem>
+
+        <ContactItem
+          text="contact@peterszarvas.hu"
+          href="mailto:contact@peterszarvas.hu"
+        >
+          <Icon>
+            <Mail />
+          </Icon>
+        </ContactItem>
+
+        <ContactItem
+          text="linkedin.com/in/peterszarvas94"
+          href="https://www.linkedin.com/in/peterszarvas94/"
+        >
+          <Icon>
+            <Linkedin />
+          </Icon>
+        </ContactItem>
+
+        <ContactItem
+          text="github.com/peterszarvas94"
+          href="https://github.com/peterszarvas94"
+        >
+          <Icon>
+            <Github />
+          </Icon>
+        </ContactItem>
+
+        <ContactItem text="peterszarvas.hu" href="https://peterszarvas.hu">
+          <Icon>
+            <Globe />
+          </Icon>
+        </ContactItem>
+      </ul>
+    </div>
+
+    <Article noLine>
+      <H2>Skills</H2>
+
+      <ul class="flex flex-wrap gap-2 justify-between">
+        <SkillItem>React</SkillItem>
+        <SkillItem>Next.js</SkillItem>
+        <SkillItem>Astro.js</SkillItem>
+        <SkillItem>TypeScript</SkillItem>
+        <SkillItem>JavaScript</SkillItem>
+        <SkillItem>Tailwind</SkillItem>
+        <SkillItem>HTML</SkillItem>
+        <SkillItem>CSS</SkillItem>
+        <SkillItem>REST</SkillItem>
+        <SkillItem>Git</SkillItem>
+        <SkillItem>Node.js</SkillItem>
+      </ul>
+    </Article>
+
+    <Article>
+      <H2>Some personal projects</H2>
+
+      <List>
+        <li>
+          <Link href="https://peterszarvas.hu">peterszarvas.hu</Link> - my personal
+          portfolio, written in React
+        </li>
+        <li>
+          <Link href="https://adri-es-peti.hu">adri-es-peti.hu</Link> - online wedding
+          invitation, React
+        </li>
+        <li>
+          <Link href="https://szeremletanc.hu">szeremletanc.hu</Link> - dancegroup's
+          website, Astro.js, with Wordpress CMS
+        </li>
+      </List>
+    </Article>
+
+    <Article>
+      <H2>Experience</H2>
+
+      <Section>
+        <H3>Frontend Developer @ Kyndryl</H3>
+        <p>October 2022 - present</p>
+        <List>
+          <li>
+            Developing with <Strong>React</Strong>, <Strong>TypeScript</Strong>,
+            JavaScript ES6+, HTML, CSS
+          </li>
+          <li>Understanding Java backend</li>
+          <li>Working with <Strong>REST API</Strong></li>
+          <li>Using <Strong>Git</Strong> for version control</li>
+        </List>
+      </Section>
+
+      <Section>
+        <H3>Microsoft 365 Administrator 3<sup>rd</sup> level @ Kyndryl</H3>
+        <p>2021 - 2022</p>
+        <List>
+          <li>Managing hybrid Exchange environment, with Azure cloud</li>
+          <li>Administrating users and mailboxes</li>
+          <li>
+            Supporting Microsoft 365 products (Exchange, Teams, Office...)
+          </li>
+          <li>PowerShell scripting for automatization</li>
+        </List>
+      </Section>
+
+      <Section>
+        <H3>Microsoft System Administrator 2<sup>nd</sup> level @ IBM</H3>
+        <p>2020 - 2021</p>
+        <List>
+          <li>Administrating Windows servers</li>
+          <li>Managing data security, user access, backup, file recovery</li>
+          <li>
+            Overseeing alerts, solving software issues, arranging hardware
+            repairs
+          </li>
+          <li>
+            Handling phone calls and emails from the customers (in English)
+          </li>
+        </List>
+      </Section>
+    </Article>
+
+    <Article>
+      <H2>Education</H2>
+      <Section>
+        <H3>Computer Science @ University of Szeged</H3>
+        <p>3 semesters</p>
+      </Section>
+    </Article>
+
+    <Article>
+      <H2>Other skills and certifications</H2>
+      <List>
+        <li><Strong>Azure</Strong> AZ-900 and AZ-104 certifications</li>
+        <li>Upper-intermediate <Strong>English</Strong> knowledge</li>
+      </List>
+    </Article>
+  </main>
+</Layout>

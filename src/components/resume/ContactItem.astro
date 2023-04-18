@@ -1,0 +1,21 @@
+---
+import Link from "./Link.astro";
+
+interface Props {
+  text: string;
+  href: string;
+}
+
+const { text, href } = Astro.props as Props;
+---
+
+<li>
+  <Link href={href}>
+    <div class="flex gap2 items-center">
+      <div class="grow text-right">{text}</div>
+      <div>
+        <slot />
+      </div>
+    </div>
+  </Link>
+</li>

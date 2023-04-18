@@ -1,0 +1,11 @@
+---
+interface Props {
+  noLine?: boolean;
+}
+
+const { noLine } = Astro.props as Props;
+---
+
+<article class={`py-2 ${noLine ? "" : "border-t-[1px] border-black"}`}>
+  <slot />
+</article>

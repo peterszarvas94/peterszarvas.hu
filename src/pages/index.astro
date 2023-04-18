@@ -1,138 +1,232 @@
 ---
-import Layout from '../layouts/main.astro'
-import Project from '../components/Project.astro'
-import Szeremle from '../img/szeremletanc.png'
-import Hangos from '../img/hangos.png'
-import Pantlika from '../img/pantlika.png'
-import Sorting from '../img/sorting.png'
-import { Icon } from 'astro-icon'
+import Layout from "../layouts/main.astro";
+import Project from "../components/Project.astro";
+import Szeremle from "../img/szeremletanc.png";
+import Wedding from "../img/wedding.png";
+import Pantlika from "../img/pantlika.png";
+import Sorting from "../img/sorting.png";
+import { Icon } from "astro-icon";
 ---
-<Layout title="Péter Szarvas">
 
+<Layout title="Péter Szarvas">
   <header class="h-[100dvh] flex items-center" id="header">
-    <div class="w-fit mx-auto text-white flex flex-col justify-between h-full max-h-96">
-      <div>
-        <p class="text-3xl sm:text-4xl mb-5">Welcome, I am</p>
-        <h1 data-text="Péter Szarvas" class="text-6xl sm:text-7xl mb-5 font-light font-firasans w-fit ocean
-          relative stroke-2-transparent
-          after:content-[attr(data-text)] after:text-zinc-900 after:absolute after:left-0 after:top-0 after:animate-fill
-          hover:after:animation-stop
-        ">
-          Péter<br/>
+    <div
+      class="w-fit mx-auto text-white flex flex-col justify-between h-full max-h-96"
+    >
+      <div class="">
+        <p class="text-3xl sm:text-4xl mb-5 animate-slide-1 opacity-0">
+          Welcome, I am
+        </p>
+        <h1
+          data-text="Péter Szarvas"
+          class="text-6xl sm:text-7xl mb-5 font-light font-firasans w-fit ocean relative stroke-2-transparent after:content-[attr(data-text)] after:text-zinc-900 after:absolute after:left-0 after:top-0 after:animate-fill hover:after:animation-stop after:clip-path-full animate-slide-2 opacity-0"
+        >
+          Péter<br />
           Szarvas
         </h1>
-        <p class="text-3xl sm:text-4xl">web developer</p>
+        <p class="text-3xl sm:text-4xl animate-slide-3 opacity-0">
+          web developer
+        </p>
       </div>
 
-      <div class="flex flex-col items-center">
-        <a href="" id="nav-about" class="flex flex-col items-center justify-center gap-1 font-firamono text-gray-700 w-fit">
+      <div class="flex flex-col items-center animate-slide-4 opacity-0">
+        <a
+          href=""
+          id="nav-about"
+          class="flex flex-col items-center justify-center gap-1 font-firamono text-gray-700 w-fit"
+        >
           <div>
             (&nbsp;<span class="text-white">about</span>&nbsp;)
           </div>
-          <Icon name="ic:baseline-keyboard-arrow-down" class="w-6 h-6 text-gray-400 animate-bounce"/>
+          <Icon
+            name="ic:baseline-keyboard-arrow-down"
+            class="w-6 h-6 text-gray-400 animate-bounce"
+          />
         </a>
       </div>
-
     </div>
   </header>
 
-
   <main>
-
-	  <section class="h-[100dvh] flex items-center" id="about">
-      <div class="flex flex-col justify-between h-full max-h-96 w-full max-w-5xl mx-auto sm:px-10">
-
+    <section class="h-[100dvh] flex items-center opacity-0" id="about">
+      <div
+        class="flex flex-col justify-between h-full max-h-96 w-full max-w-5xl mx-auto sm:px-10"
+      >
         <div class="flex flex-row pr-3 sm:pr-0 sm:gap-10">
-          <h2 class="text-3xl font-firamono text-gray-700 writing-v rotate-180 h-fit">
+          <h2
+            class="text-3xl font-firamono text-gray-700 writing-v rotate-180 h-fit"
+          >
             #<span class="fire">about</span>
-          </h2 >
+          </h2>
 
           <div class="flex flex-col gap-10">
-            <p class="text-md sm:text-lg text-white text-justify w-full font-firasans">
-              I am a self-taught web developer, living in Hungary. Currently working as a font-end dev,
-              but stepping a foot into back-end as well. I have diverse skills, but most importatly, I
-              can learn and use the necessary tools, to reach the required solution.
+            <p
+              class="text-md sm:text-lg text-white text-justify w-full font-firasans"
+            >
+              I'm a self-taught web developer based in Hungary. My focus is on
+              front-end development, while expanding my skills into the back-end
+              world as well. I have a diverse skillset and I am constantly
+              learning new technologies to ensure I provide innovative solutions
+              for my clients. Please take a look at my <a
+                href="/resume"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <span class="underline">resume</span>
+                <Icon
+                  name="mdi:external-link"
+                  class="w-6 h-6 text-gray-400 inline"
+                />
+              </a>
+              which you can print out for further reference.
             </p>
-            <ul class="text-md sm:text-lg flex flex-row flex-wrap gap-2 font-firamono text-gray-700">
-              <li>/<span class="text-white">html<span></li>
-              <li>/<span class="text-white">css<span></li>
-              <li>/<span class="fire">typescript<span></li>
-              <li>/<span class="text-white">javascript<span></li>
-              <li>/<span class="text-white">node.js<span></li>
-              <li>/<span class="fire">react<span></li>
-              <li>/<span class="text-white">astro<span></li>
-              <li>/<span class="fire">next.js<span></li>
-              <li>/<span class="text-white">git<span></li>
-              <li>/<span class="text-white">rest<span></li>
-              <li>/<span class="text-white">graphql<span></li>
-              <li>/<span class="text-white">trpc<span></li>
+            <ul
+              class="text-md sm:text-lg flex flex-row flex-wrap gap-2 font-firamono text-gray-700"
+            >
+              <li>&#47;<span class="text-white">html</span></li>
+              <li>&#47;<span class="text-white">css</span></li>
+              <li>&#47;<span class="fire">typescript</span></li>
+              <li>&#47;<span class="text-white">javascript</span></li>
+              <li>&#47;<span class="text-white">node.js</span></li>
+              <li>&#47;<span class="fire">react</span></li>
+              <li>&#47;<span class="text-white">astro</span></li>
+              <li>&#47;<span class="fire">next.js</span></li>
+              <li>&#47;<span class="text-white">git</span></li>
+              <li>&#47;<span class="text-white">rest</span></li>
+              <li>&#47;<span class="text-white">graphql</span></li>
+              <li>&#47;<span class="text-white">trpc</span></li>
             </ul>
           </div>
         </div>
 
         <div class="flex flex-col items-center">
-          <a href="" id="nav-projects" class="flex flex-col items-center font-firamono text-gray-700 w-fit">
+          <a
+            href=""
+            id="nav-projects"
+            class="flex flex-col items-center font-firamono text-gray-700 w-fit"
+          >
             <div>
               &#123;&nbsp;<span class="text-white">projects</span>&nbsp;&#125;
             </div>
-            <Icon name="ic:baseline-keyboard-arrow-down" class="w-6 h-6 text-gray-400 animate-bounce"/>
+            <Icon
+              name="ic:baseline-keyboard-arrow-down"
+              class="w-6 h-6 text-gray-400 animate-bounce"
+            />
           </a>
         </div>
-
       </div>
     </section>
 
-    <section class="min-h-[100dvh] flex items-center" id="projects">
-      <div class="flex flex-col gap-10 justify-between h-full w-full max-w-5xl mx-auto sm:px-10">
+    <section class="min-h-[100dvh] flex items-center opacity-0" id="projects">
+      <div
+        class="flex flex-col gap-10 justify-between h-full w-full max-w-5xl mx-auto sm:px-10"
+      >
         <div class="flex flex-row sm:gap-x-10">
-          <h2 class="text-3xl font-firamono text-gray-700 writing-v rotate-180 h-fit" id="projects">
+          <h2
+            class="text-3xl font-firamono text-gray-700 writing-v rotate-180 h-fit"
+            id="projects"
+          >
             #<span class="fire">projects</span>
-          </h2 >
-          <div class="mx-auto grid gap-5 grid-cols-1 pr-3 sm:pr-0 sm:grid-cols-2">
-            <Project title="Dancegroup's site" image={Szeremle} url="szeremletanc.hu" place="object-top"/>
-            <Project title="Singing studio's site" image={Hangos} url="hangosstudio.hu"/>
-            <Project title="Music band's site" image={Pantlika} url="pantlikazenekar.hu"/>
-            <Project title="Sorting algorithms" image={Sorting} url="tender-booth-f0f6bb.netlify.app/" place="object-top"/>
+          </h2>
+          <div
+            class="mx-auto grid gap-5 grid-cols-1 pr-3 sm:pr-0 sm:grid-cols-2"
+          >
+            <Project
+              title="Dancegroup's site"
+              image={Szeremle}
+              url="szeremletanc.hu"
+              place="object-top"
+            />
+            <Project
+              title="Wedding invitation"
+              image={Wedding}
+              url="adri-es-peti.hu"
+              place="object-top"
+            />
+            <Project
+              title="Music band's site"
+              image={Pantlika}
+              url="pantlikazenekar.hu"
+            />
+            <Project
+              title="Sorting algorithms"
+              image={Sorting}
+              url="tender-booth-f0f6bb.netlify.app/"
+              place="object-top"
+            />
           </div>
         </div>
         <div class="col-span-2 flex flex-col items-center">
-          <a href="" id="nav-contact" class="flex flex-col items-center font-firamono text-gray-700 w-fit">
+          <a
+            href=""
+            id="nav-contact"
+            class="flex flex-col items-center font-firamono text-gray-700 w-fit"
+          >
             <div>
               &#91;&nbsp;<span class="text-white">contact</span>&nbsp;&#93;
             </div>
-            <Icon name="ic:baseline-keyboard-arrow-down" class="w-6 h-6 text-gray-400 animate-bounce"/>
+            <Icon
+              name="ic:baseline-keyboard-arrow-down"
+              class="w-6 h-6 text-gray-400 animate-bounce"
+            />
           </a>
         </div>
       </div>
     </section>
 
-    <section class="min-h-[100dvh] flex items-center" id="projects">
-      <div class="flex flex-col gap-12 justify-between h-full w-full max-w-5xl mx-auto sm:px-10">
-        <div class="flex flex-row h-full max-h-96 w-full max-w-5xl mx-auto sm:gap-10">
-          <h2 class="text-3xl font-firamono text-gray-700 writing-v rotate-180 h-fit" id="contact">
+    <section class="min-h-[100dvh] flex items-center opacity-0" id="contact">
+      <div
+        class="flex flex-col gap-12 justify-between h-full w-full max-w-5xl mx-auto sm:px-10"
+      >
+        <div
+          class="flex flex-row h-full max-h-96 w-full max-w-5xl mx-auto sm:gap-10"
+        >
+          <h2
+            class="text-3xl font-firamono text-gray-700 writing-v rotate-180 h-fit"
+          >
             #<span class="fire">contact</span>
-          </h2 >
+          </h2>
           <ul class="text-white flex flex-col gap-2 w-full pr-3 sm:pr-0">
             <li class="flex flex-row items-center justify-end gap-1">
-              <a href="mailto:contact@peterszarvas.hu" target="_blank" rel="noopener noreferrer">contact@peterszarvas.hu</a>
-              <Icon name="ic:round-mail" class="h-6 w-6 text-gray-700"/>
+              <a
+                href="mailto:contact@peterszarvas.hu"
+                target="_blank"
+                rel="noopener noreferrer">contact@peterszarvas.hu</a
+              >
+              <Icon name="ic:round-mail" class="h-6 w-6 text-gray-700" />
             </li>
             <li class="flex flex-row items-center justify-end gap-1">
-              <a href="https://github.com/peterszarvas94" target="_blank" rel="noopener noreferrer">github.com/peterszarvas94</a>
-              <Icon name="mdi:github" class="h-6 w-6 text-gray-700"/>
+              <a
+                href="https://github.com/peterszarvas94"
+                target="_blank"
+                rel="noopener noreferrer">github.com/peterszarvas94</a
+              >
+              <Icon name="mdi:github" class="h-6 w-6 text-gray-700" />
             </li>
             <li class="flex flex-row items-center justify-end gap-1">
-              <a href="https://www.linkedin.com/in/peterszarvas94/" target="_blank" rel="noopener noreferrer">linkedin.com/in/peterszarvas94</a>
-              <Icon name="mdi:linkedin" class="h-6 w-6 text-gray-700"/>
+              <a
+                href="https://www.linkedin.com/in/peterszarvas94/"
+                target="_blank"
+                rel="noopener noreferrer">linkedin.com/in/peterszarvas94</a
+              >
+              <Icon name="mdi:linkedin" class="h-6 w-6 text-gray-700" />
             </li>
             <li class="flex flex-row items-center justify-end gap-1">
-              <a href="tel:+36202746444" target="_blank" rel="noopener noreferrer">+36 20 274 6444</a>
-              <Icon name="mdi:telephone" class="h-6 w-6 text-gray-700"/>
+              <a
+                href="tel:+36202746444"
+                target="_blank"
+                rel="noopener noreferrer">+36 20 274 6444</a
+              >
+              <Icon name="mdi:telephone" class="h-6 w-6 text-gray-700" />
             </li>
           </ul>
         </div>
         <div class="flex flex-col items-center">
-          <a href="" id="nav-header" class="flex flex-col items-center font-firamono text-gray-700 w-fit">
+          <a
+            href=""
+            id="nav-header"
+            class="flex flex-col items-center font-firamono text-gray-700 w-fit"
+          >
             <div>
               &lt;&nbsp;<span class="text-white">jump to top</span>&nbsp;/&gt;
             </div>
@@ -140,16 +234,10 @@ import { Icon } from 'astro-icon'
         </div>
       </div>
     </section>
+  </main>
+</Layout>elf-taught web developer, living in Hungar
 
-	</main>
-
-</Layout>
-
-<style is:global>
-  * {
-    /*outline: 1px solid #333;*/
-  }
-
+<style>
   @tailwind base;
   @tailwind components;
   @tailwind utilities;
@@ -163,50 +251,82 @@ import { Icon } from 'astro-icon'
       @apply text-transparent bg-clip-text bg-gradient-to-br from-emerald-400 to-sky-400;
     }
   }
-
 </style>
 
 <script>
-  function getElementTop(id: string) : number {
-    const el = document.getElementById(id);
-    if (!el) return 0;
-
+  function getElementTop(el: HTMLElement): number {
     const rect = el.getBoundingClientRect();
     return rect.top;
   }
 
-  function scrollToElement(id: string) : void {
-    const el = document.getElementById(id);
-    if (!el) return;
-
+  function scrollToElement(el: HTMLElement): void {
     window.scrollTo({
-      top: getElementTop(id) + window.pageYOffset,
-      behavior: "smooth"
+      top: getElementTop(el) + window.pageYOffset,
+      behavior: "smooth",
     });
     return;
   }
 
   const navAbout = document.getElementById("nav-about");
-  navAbout?.addEventListener('click', (event: MouseEvent) => {
-    event.preventDefault();
-    scrollToElement("about");
-  })
+  const about = document.getElementById("about");
+  if (navAbout && about) {
+    navAbout.addEventListener("click", (event: MouseEvent) => {
+      event.preventDefault();
+      scrollToElement(about);
+    });
+
+    const aboutSrcollEventLIstener = () => {
+      if (getElementTop(about) <= window.innerHeight / 2) {
+        about.classList.add("animate-slide-5");
+        window.removeEventListener("scroll", aboutSrcollEventLIstener);
+      }
+    };
+
+    window.addEventListener("scroll", aboutSrcollEventLIstener);
+  }
 
   const navProjects = document.getElementById("nav-projects");
-  navProjects?.addEventListener('click', (event: MouseEvent) => {
-    event.preventDefault();
-    scrollToElement("projects");
-  })
+  const projects = document.getElementById("projects");
+  if (navProjects && projects) {
+    navProjects.addEventListener("click", (event: MouseEvent) => {
+      event.preventDefault();
+      scrollToElement(projects);
+    });
+
+    const projectsSrcollEventLIstener = () => {
+      if (getElementTop(projects) <= window.innerHeight / 2) {
+        projects.classList.add("animate-slide-5");
+        window.removeEventListener("scroll", projectsSrcollEventLIstener);
+      }
+    };
+
+    window.addEventListener("scroll", projectsSrcollEventLIstener);
+  }
 
   const navContact = document.getElementById("nav-contact");
-  navContact?.addEventListener('click', (event: MouseEvent) => {
-    event.preventDefault();
-    scrollToElement("contact");
-  })
+  const contact = document.getElementById("contact");
+  if (navContact && contact) {
+    navContact.addEventListener("click", (event: MouseEvent) => {
+      event.preventDefault();
+      scrollToElement(contact);
+    });
+
+    const contactSrcollEventLIstener = () => {
+      if (getElementTop(contact) <= window.innerHeight / 2) {
+        contact.classList.add("animate-slide-5");
+        window.removeEventListener("scroll", contactSrcollEventLIstener);
+      }
+    };
+
+    window.addEventListener("scroll", contactSrcollEventLIstener);
+  }
 
   const navHeader = document.getElementById("nav-header");
-  navHeader?.addEventListener('click', (event: MouseEvent) => {
-    event.preventDefault();
-    scrollToElement("header");
-  })
+  const header = document.getElementById("header");
+  if (navHeader && header) {
+    navHeader.addEventListener("click", (event: MouseEvent) => {
+      event.preventDefault();
+      scrollToElement(header);
+    });
+  }
 </script>
