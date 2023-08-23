@@ -52,7 +52,7 @@ import { Icon } from "astro-icon";
   <main>
     <section class="h-[100dvh] flex items-center opacity-0" id="about">
       <div
-        class="flex flex-col justify-between h-full max-h-96 w-full max-w-5xl mx-auto sm:px-10"
+        class="flex flex-col gap-10 justify-between h-full max-h-96 w-full max-w-5xl mx-auto sm:px-10"
       >
         <div class="flex flex-row pr-3 sm:pr-0 sm:gap-10">
           <h2
@@ -105,7 +105,7 @@ import { Icon } from "astro-icon";
           <a
             href=""
             id="nav-projects"
-            class="flex flex-col items-center font-firamono text-gray-700 w-fit"
+            class="flex flex-col gap-1 items-center font-firamono text-gray-700 w-fit"
           >
             <div>
               &#123;&nbsp;<span class="text-white">projects</span>&nbsp;&#125;
@@ -119,7 +119,10 @@ import { Icon } from "astro-icon";
       </div>
     </section>
 
-    <section class="min-h-[100dvh] flex items-center opacity-0" id="projects">
+    <section
+      class="min-h-[100dvh] flex items-center opacity-0 pt-2"
+      id="projects"
+    >
       <div
         class="flex flex-col gap-10 justify-between h-full w-full max-w-5xl mx-auto sm:px-10"
       >
@@ -138,35 +141,41 @@ import { Icon } from "astro-icon";
               image={Szeremle}
               url="szeremletanc.hu"
               place="object-top"
+              github="github.com/peterszarvas94/szeremletanc-astro"
             />
             <Project
               title="Wedding invitation"
               image={Wedding}
               url="adri-es-peti.hu"
               place="object-top"
+              github="github.com/peterszarvas94/weddingsite"
             />
             <Project
               title="Music band's site"
               image={Pantlika}
               url="pantlikazenekar.hu"
+              github="github.com/peterszarvas94/pantlikazenekar"
             />
             <Project
               title="Calculator"
               image={Calculator}
               url="react-calculator-seven-theta.vercel.app"
               place="object-top"
+              github="github.com/peterszarvas94/react-calculator"
             />
             <Project
               title="Movie database"
               image={Movies}
               url="vite-movie-gallery.vercel.app/"
               place="object-top"
+              github="github.com/peterszarvas94/vite-react-movie-gallery"
             />
             <Project
-              title="Tic Tac Toe"
+              title="Tig Tac Toe (but bigger)"
               image={TicTacToe}
               url="big-tac-toe.vercel.app"
               place="object-top"
+              github="github.com/peterszarvas94/big-tac-toe"
             />
           </div>
         </div>
@@ -277,7 +286,7 @@ import { Icon } from "astro-icon";
 
   function scrollToElement(el: HTMLElement): void {
     window.scrollTo({
-      top: getElementTop(el) + window.pageYOffset,
+      top: getElementTop(el) + window.scrollY,
       behavior: "smooth",
     });
     return;

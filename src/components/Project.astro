@@ -1,5 +1,5 @@
 ---
-import Link from './Link.astro';
+import Link from "./Link.astro";
 
 interface ProjectProps {
   title: string;
@@ -10,23 +10,29 @@ interface ProjectProps {
   place?: string;
 }
 
-const { title, image, url, place } = Astro.props as ProjectProps;
+const { title, image, url, place, github } = Astro.props as ProjectProps;
 ---
 
 <figure>
   <div class="grayscale-60 w-full aspect-video">
-    <a href={`https://${url}`} class="font-firamono" target="_blank" rel="noopener noreferrer">
-      <img src={image} alt={title} class=`${place || 'object-center'} w-full h-full object-cover  mb-2 border-2 border-gray-700`/>
+    <a
+      href={`https://${url}`}
+      class="font-firamono"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img
+        src={image}
+        alt={title}
+        class=`${place || 'object-center'} w-full h-full object-cover  mb-2 border-2 border-gray-700`
+      />
     </a>
   </div>
   <figcaption class="text-lg font-firasans text-white">
     {title}
   </figcaption>
-  {
-    url && (
-      <Link url={url}/>
-    )
-  }
+  {url && <Link url={url} />}
+  {github && <Link url={github} github={true} />}
 </figure>
 
 <style>

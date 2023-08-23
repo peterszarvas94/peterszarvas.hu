@@ -77,7 +77,7 @@ module.exports = {
         'slide-2': '1s 0.25s ease slide-rl forwards',
         'slide-3': '1s 0.5s ease slide-lr forwards',
         'slide-4': '1s 0.75s ease slide-bt forwards',
-        'slide-5': '0.5s ease slide-rl forwards',
+        'slide-5': '0.5s ease slide-bt forwards',
       },
 
     }

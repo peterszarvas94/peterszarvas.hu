@@ -1,16 +1,38 @@
 ---
-import { Icon } from 'astro-icon';
+import { Icon } from "astro-icon";
 
 interface LinkProps {
   url: string;
+  github?: boolean;
 }
 
-const {url}  = Astro.props as LinkProps;
+const { url, github } = Astro.props as LinkProps;
+
+const ghArr = url.split("/").slice(2);
+ghArr.unshift("gh/");
+console.log(ghArr);
+const ghStr = ghArr.join("");
+
+const realUrl = github ? ghStr : url;
 ---
 
 <div class="text-white flex flex-row items-top justify-start gap-1">
-  <Icon name="ic:outline-insert-link" class="w-6 h-6 inline-block text-gray-700" />
-  <a href={`https://${url}`} class="font-firamono" target="_blank" rel="noopener noreferrer">
-    {url}
+  {
+    !github ? (
+      <Icon
+        name="ic:outline-insert-link"
+        class="w-6 h-6 inline-block text-gray-700"
+      />
+    ) : (
+      <Icon name="mdi:github" class="w-6 h-6 inline-block text-gray-700" />
+    )
+  }
+  <a
+    href={`https://${url}`}
+    class="font-firamono"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    {realUrl}
   </a>
 </div>
