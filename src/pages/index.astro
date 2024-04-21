@@ -86,20 +86,16 @@ import { Icon } from "astro-icon";
             <ul
               class="text-md sm:text-lg flex flex-row flex-wrap gap-2 font-firamono text-gray-500"
             >
+              <li>/<span class="fire">react</span></li>
+              <li>/<span class="fire">next.js</span></li>
+              <li>/<span class="text-gray-500">javascript</span></li>
+              <li>/<span class="fire">typescript</span></li>
+              <li>/<span class="text-gray-500">astro.js</span></li>
+              <li>/<span class="fire">node.js</span></li>
+              <li>/<span class="text-gray-500">go</span></li>
               <li>/<span class="text-gray-500">html</span></li>
               <li>/<span class="text-gray-500">css</span></li>
-              <li>/<span class="fire">typescript</span></li>
-              <li>/<span class="text-gray-500">javascript</span></li>
-              <li>/<span class="fire">react</span></li>
-              <li>/<span class="text-gray-500">astro</span></li>
-              <li>/<span class="fire">next.js</span></li>
-              <li>/<span class="text-gray-500">htmx</span></li>
               <li>/<span class="text-gray-500">git</span></li>
-              <li>/<span class="fire">node.js</span></li>
-              <li>/<span class="text-gray-500">rest</span></li>
-              <li>/<span class="text-gray-500">trpc</span></li>
-              <li>~/<span class="text-gray-500">go</span></li>
-              <li>~/<span class="text-gray-500">rust</span></li>
             </ul>
           </div>
         </div>
@@ -149,7 +145,7 @@ import { Icon } from "astro-icon";
             <Project
               title="Wedding invitation"
               image={Wedding}
-              url="adri-es-peti.hu"
+              url="weddingsite-xi.vercel.app"
               place="object-top"
               github="github.com/peterszarvas94/weddingsite"
             />
@@ -325,6 +321,7 @@ import { Icon } from "astro-icon";
     };
 
     window.addEventListener("scroll", aboutSrcollEventLIstener);
+    window.addEventListener("load", aboutSrcollEventLIstener);
   }
 
   const navProjects = document.getElementById("nav-projects");
@@ -343,6 +340,7 @@ import { Icon } from "astro-icon";
     };
 
     window.addEventListener("scroll", projectsSrcollEventLIstener);
+    window.addEventListener("load", projectsSrcollEventLIstener);
   }
 
   const navContact = document.getElementById("nav-contact");
@@ -357,6 +355,7 @@ import { Icon } from "astro-icon";
       if (getElementTop(contact) <= window.innerHeight / 2) {
         contact.classList.add("animate-slide-5");
         window.removeEventListener("scroll", contactSrcollEventLIstener);
+        window.removeEventListener("load", contactSrcollEventLIstener);
       }
     };
 

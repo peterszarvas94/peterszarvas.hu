@@ -17,6 +17,8 @@ import Mail from "../components/icons/mail.astro";
 import House from "../components/icons/house.astro";
 import Icon from "../components/resume/Icon.astro";
 import SkillItem from "../components/resume/SkillItem.astro";
+import Highlight from "../components/resume/Highlight.astro";
+import Chip from "../components/resume/Chip.astro";
 ---
 
 <Layout title="Péter Szarvas - Resume">
@@ -36,7 +38,7 @@ import SkillItem from "../components/resume/SkillItem.astro";
         <h1 class="text-3xl text-gray-700 uppercase font-bold">
           Péter Szarvas
         </h1>
-        <p class="text-2xl pb-2">developer</p>
+        <p class="text-2xl pb-2">web developer</p>
       </div>
 
       <ul class="grow">
@@ -79,7 +81,7 @@ import SkillItem from "../components/resume/SkillItem.astro";
           </Icon>
         </ContactLink>
 
-        <ContactItem text="Budapest, Hungary">
+        <ContactItem text="Martonvásár, Hungary">
           <Icon>
             <House />
           </Icon>
@@ -93,17 +95,67 @@ import SkillItem from "../components/resume/SkillItem.astro";
       <ul class="flex flex-wrap gap-2 justify-between">
         <SkillItem>React</SkillItem>
         <SkillItem>Next.js</SkillItem>
-        <SkillItem>Node.js</SkillItem>
-        <SkillItem>Astro.js</SkillItem>
         <SkillItem>TypeScript</SkillItem>
         <SkillItem>JavaScript</SkillItem>
-        <SkillItem>HTMX</SkillItem>
-        <SkillItem>Tailwind</SkillItem>
+        <SkillItem>Node.js</SkillItem>
+        <SkillItem>Astro.js</SkillItem>
+        <SkillItem>Go</SkillItem>
         <SkillItem>HTML</SkillItem>
         <SkillItem>CSS</SkillItem>
-        <SkillItem>REST</SkillItem>
         <SkillItem>Git</SkillItem>
       </ul>
+    </Article>
+
+    <Article>
+      <H2>Experience</H2>
+
+      <Section>
+        <H3>Full-stack Developer @ Eviden (as contractor)</H3>
+        <p>2024 february - present</p>
+        <List>
+          <li>
+            Creating a greenfield application for millions of users for a goverment
+            project
+          </li>
+          <li>
+            <Chip text="React" filled={true}/>
+            <Chip text="TypeScript" filled={true}/>
+            <Chip text="Node.js" filled={true}/>
+            <Chip text="HTML" /> 
+            <Chip text="CSS" />
+            <Chip text="Material UI" filled={true}/>
+            <Chip text="Git" filled={true}/>
+          </li>
+        </List>
+      </Section>
+
+      <Section>
+        <H3>Developer @ Kyndryl</H3>
+        <p>2022 - 2024</p>
+        <List>
+          <li>
+            Developing an internal application (a ticketing system) for new
+            business opportunities
+          </li>
+          <li>
+            <Chip text="React" /> 
+            <Chip text="JavaScript" filled={true}/>
+            <Chip text="Node.js" /> 
+            <Chip text="HTML" /> 
+            <Chip text="CSS" /> 
+            <Chip text="Git" /> 
+          </li>
+        </List>
+      </Section>
+
+      <Section>
+        <H3>Microsoft System Administrator @ IBM / Kyndryl</H3>
+        <p>2020 - 2022</p>
+        <List>
+          <li>Managing a hybrid could environment, with Windows servers and Microsoft Azure</li>
+          <li>PowerShell scripting for automation</li>
+        </List>
+      </Section>
     </Article>
 
     <Article>
@@ -112,11 +164,7 @@ import SkillItem from "../components/resume/SkillItem.astro";
       <List>
         <li>
           <Link href="https://peterszarvas.hu">peterszarvas.hu</Link>
-          - my personal portfolio, written in Astro.js
-        </li>
-        <li>
-          <Link href="https://adri-es-peti.hu">adri-es-peti.hu</Link>
-          - online wedding invitation, React
+          - my personal portfolio, written in <Highlight text="Astro.js" />
         </li>
         <li>
           <Link href="https://szeremletanc.hu">szeremletanc.hu</Link>
@@ -127,6 +175,12 @@ import SkillItem from "../components/resume/SkillItem.astro";
           - webpage for my music band, Astro.js
         </li>
         <li>
+          <Link href="https://weddingsite-xi.vercel.app/">
+            weddingsite-xi.vercel.app
+          </Link>
+          - online wedding invitation, React
+        </li>
+        <li>
           <Link href="https://react-calculator-seven-theta.vercel.app/">
             react-calculator-seven-theta.vercel.app
           </Link> - simple calculator, React
@@ -134,7 +188,7 @@ import SkillItem from "../components/resume/SkillItem.astro";
         <li>
           <Link href="https://nextjs-fake-webshop.vercel.app/">
             nextjs-fake-webshop.vercel.app
-          </Link> - fake webshop, Next.js
+          </Link> - fake webshop, <Highlight text="Next.js" />
         </li>
         <li>
           <Link href="https://react-spending-tracker.vercel.app/">
@@ -151,45 +205,6 @@ import SkillItem from "../components/resume/SkillItem.astro";
     </Article>
 
     <Article>
-      <H2>Experience</H2>
-
-      <Section>
-        <H3>Developer @ Kyndryl</H3>
-        <p>2021 - present</p>
-        <List>
-          <li>
-            Developing an internal application (like a ticketing system) for new
-            business opportunities
-          </li>
-          <li>The team is one backend and one frontend developer (me)</li>
-          <li>
-            Writing code in legacy and modern <Strong text="React," />
-            <Strong text="TypeScript," /><Strong text="Node.js," />JavaScript
-            ES6+, HTML, CSS
-          </li>
-          <li>Understanding the Java backend and using it's API</li>
-          <li>Using <Strong text="Git" /> for version control</li>
-        </List>
-      </Section>
-
-      <Section>
-        <H3>Microsoft System Administrator @ IBM</H3>
-        <p>2020 - 2021</p>
-        <List>
-          <li>Administrating Windows servers, user access, backups</li>
-          <li>
-            Overseeing alerts, solving software issues, arranging hardware
-            repairs
-          </li>
-          <li>
-            Managing hybrid cloud environment, with Azure, emphasis on Exchange
-            and Microsoft 365
-          </li>
-        </List>
-      </Section>
-    </Article>
-
-    <Article>
       <H2>Education</H2>
       <Section>
         <H3>Computer Science @ University of Szeged</H3>
@@ -200,9 +215,10 @@ import SkillItem from "../components/resume/SkillItem.astro";
     <Article>
       <H2>Other skills and certifications</H2>
       <List>
-        <li><Strong text="Azure" /> AZ-900 and AZ-104 certifications</li>
-        <li>Upper-intermediate <Strong text="English" /> knowledge</li>
+        <li>Azure AZ-104 certifications</li>
+        <li>Upper-intermediate English knowledge</li>
       </List>
     </Article>
+
   </main>
 </Layout>
