@@ -4,9 +4,9 @@ import Project from "../components/Project.astro";
 import Szeremle from "../img/szeremletanc.png";
 import Wedding from "../img/wedding.png";
 import Pantlika from "../img/pantlika.png";
+import Pengoe from "../img/pengoe.png";
 import Calculator from "../img/calculator.png";
 import Webshop from "../img/webshop.png";
-import Spending from "../img/spending.png";
 import Movies from "../img/movies.png";
 import TicTacToe from "../img/tictactoe.png";
 import { Icon } from "astro-icon";
@@ -29,7 +29,7 @@ import { Icon } from "astro-icon";
           Szarvas
         </h1>
         <p class="text-3xl sm:text-4xl animate-slide-3 opacity-0">
-          web developer
+          full-stack developer
         </p>
       </div>
 
@@ -92,7 +92,7 @@ import { Icon } from "astro-icon";
               <li>/<span class="fire">typescript</span></li>
               <li>/<span class="text-gray-500">astro.js</span></li>
               <li>/<span class="fire">node.js</span></li>
-              <li>/<span class="text-gray-500">go</span></li>
+              <li>/<span class="ocean">go</span></li>
               <li>/<span class="text-gray-500">html</span></li>
               <li>/<span class="text-gray-500">css</span></li>
               <li>/<span class="text-gray-500">git</span></li>
@@ -150,6 +150,13 @@ import { Icon } from "astro-icon";
               github="github.com/peterszarvas94/weddingsite"
             />
             <Project
+              title="Shared wallet tracker app (in progress)"
+              image={Pengoe}
+              url="pengoe.hu"
+              place="object-top"
+              github="github.com/peterszarvas94/pengoe"
+            />
+            <Project
               title="Music band's site"
               image={Pantlika}
               url="pantlikazenekar.hu"
@@ -168,13 +175,6 @@ import { Icon } from "astro-icon";
               url="nextjs-fake-webshop.vercel.app"
               place="object-top"
               github="github.com/peterszarvas94/nextjs-fake-webshop"
-            />
-            <Project
-              title="Spending tracker"
-              image={Spending}
-              url="react-spending-tracker.vercel.app"
-              place="object-top"
-              github="github.com/peterszarvas94/react-spending-tracker"
             />
             <Project
               title="Movie database"
@@ -273,7 +273,7 @@ import { Icon } from "astro-icon";
       </div>
     </section>
   </main>
-</Layout>elf-taught web developer, living in Hungar
+</Layout>
 
 <style>
   @tailwind base;

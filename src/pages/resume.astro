@@ -7,7 +7,6 @@ import H2 from "../components/resume/H2.astro";
 import H3 from "../components/resume/H3.astro";
 import List from "../components/resume/List.astro";
 import Section from "../components/resume/Section.astro";
-import Strong from "../components/resume/Strong.astro";
 import Layout from "../layouts/resume.astro";
 import Phone from "../components/icons/phone.astro";
 import Linkedin from "../components/icons/linkedin.astro";
@@ -16,8 +15,6 @@ import Globe from "../components/icons/globe.astro";
 import Mail from "../components/icons/mail.astro";
 import House from "../components/icons/house.astro";
 import Icon from "../components/resume/Icon.astro";
-import SkillItem from "../components/resume/SkillItem.astro";
-import Highlight from "../components/resume/Highlight.astro";
 import Chip from "../components/resume/Chip.astro";
 ---
 
@@ -38,7 +35,7 @@ import Chip from "../components/resume/Chip.astro";
         <h1 class="text-3xl text-gray-700 uppercase font-bold">
           Péter Szarvas
         </h1>
-        <p class="text-2xl pb-2">web developer</p>
+        <p class="text-2xl pb-2">full-stack developer</p>
       </div>
 
       <ul class="grow">
@@ -93,24 +90,69 @@ import Chip from "../components/resume/Chip.astro";
       <H2>Skills</H2>
 
       <ul class="flex flex-wrap gap-2 justify-between">
-        <SkillItem>React</SkillItem>
-        <SkillItem>Next.js</SkillItem>
-        <SkillItem>TypeScript</SkillItem>
-        <SkillItem>JavaScript</SkillItem>
-        <SkillItem>Node.js</SkillItem>
-        <SkillItem>Astro.js</SkillItem>
-        <SkillItem>Go</SkillItem>
-        <SkillItem>HTML</SkillItem>
-        <SkillItem>CSS</SkillItem>
-        <SkillItem>Git</SkillItem>
+        <li>Go</li>
+        <li>React</li>
+        <li>Next.js</li>
+        <li>TypeScript</li>
+        <li>JavaScript</li>
+        <li>Node.js</li>
+        <li>Astro.js</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Git</li>
       </ul>
+    </Article>
+
+    <Article>
+      <H2>Some personal projects</H2>
+
+      <List>
+        <li>
+          <Link href="https://pengoe.hu">pengoe.hu</Link>
+          - shared wallet tracker app (in progress), HTMX, <Chip text="Go" filled={true} />
+        </li>
+        <li>
+          <Link href="https://peterszarvas.hu">peterszarvas.hu</Link>
+          - my personal portfolio, <Chip text="Astro.js" filled={true} />
+        </li>
+        <li>
+          <Link href="https://szeremletanc.hu">szeremletanc.hu</Link>
+          - dancegroup's website, Astro.js, Wordpress CMS
+        </li>
+        <li>
+          <Link href="https://pantlikazenekar.hu/">pantlikazekar.hu</Link>
+          - webpage for my music band, Astro.js
+        </li>
+        <li>
+          <Link href="https://weddingsite-xi.vercel.app/">
+            weddingsite-xi.vercel.app
+          </Link>
+          - online wedding invitation, React
+        </li>
+        <li>
+          <Link href="https://react-calculator-seven-theta.vercel.app/">
+            react-calculator-seven-theta.vercel.app
+          </Link> - simple calculator, React
+        </li>
+        <li>
+          <Link href="https://nextjs-fake-webshop.vercel.app/">
+            nextjs-fake-webshop.vercel.app
+          </Link> - fake webshop, <Chip text="Next.js" filled={true} />
+        </li>
+        <li>
+          <Link href="https://big-tac-toe.vercel.app/">
+            big-tac-toe.vercel.app
+          </Link>
+          - tic-tac-toe with multiple options, React
+        </li>
+      </List>
     </Article>
 
     <Article>
       <H2>Experience</H2>
 
       <Section>
-        <H3>Full-stack Developer @ Eviden (as contractor)</H3>
+        <H3>Full-stack Developer @ Eviden (contractor)</H3>
         <p>2024 february - present</p>
         <List>
           <li>
@@ -139,7 +181,7 @@ import Chip from "../components/resume/Chip.astro";
           </li>
           <li>
             <Chip text="React" /> 
-            <Chip text="JavaScript" filled={true}/>
+            <Chip text="JavaScript"/>
             <Chip text="Node.js" /> 
             <Chip text="HTML" /> 
             <Chip text="CSS" /> 
@@ -156,52 +198,6 @@ import Chip from "../components/resume/Chip.astro";
           <li>PowerShell scripting for automation</li>
         </List>
       </Section>
-    </Article>
-
-    <Article>
-      <H2>Some personal projects</H2>
-
-      <List>
-        <li>
-          <Link href="https://peterszarvas.hu">peterszarvas.hu</Link>
-          - my personal portfolio, written in <Highlight text="Astro.js" />
-        </li>
-        <li>
-          <Link href="https://szeremletanc.hu">szeremletanc.hu</Link>
-          - dancegroup's website, Astro.js, with Wordpress CMS
-        </li>
-        <li>
-          <Link href="https://pantlikazenekar.hu/">pantlikazekar.hu</Link>
-          - webpage for my music band, Astro.js
-        </li>
-        <li>
-          <Link href="https://weddingsite-xi.vercel.app/">
-            weddingsite-xi.vercel.app
-          </Link>
-          - online wedding invitation, React
-        </li>
-        <li>
-          <Link href="https://react-calculator-seven-theta.vercel.app/">
-            react-calculator-seven-theta.vercel.app
-          </Link> - simple calculator, React
-        </li>
-        <li>
-          <Link href="https://nextjs-fake-webshop.vercel.app/">
-            nextjs-fake-webshop.vercel.app
-          </Link> - fake webshop, <Highlight text="Next.js" />
-        </li>
-        <li>
-          <Link href="https://react-spending-tracker.vercel.app/">
-            react-spending-tracker.vercel.app
-          </Link> - spending tracker, React
-        </li>
-        <li>
-          <Link href="https://big-tac-toe.vercel.app/">
-            big-tac-toe.vercel.app
-          </Link>
-          - tic-tac-toe with multiple options, React
-        </li>
-      </List>
     </Article>
 
     <Article>
