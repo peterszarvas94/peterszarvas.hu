@@ -90,62 +90,17 @@ import Chip from "../components/resume/Chip.astro";
       <H2>Skills</H2>
 
       <ul class="flex flex-wrap gap-2 justify-between">
-        <li>Go</li>
         <li>React</li>
         <li>Next.js</li>
         <li>TypeScript</li>
         <li>JavaScript</li>
+        <li>Go</li>
         <li>Node.js</li>
         <li>Astro.js</li>
         <li>HTML</li>
         <li>CSS</li>
         <li>Git</li>
       </ul>
-    </Article>
-
-    <Article>
-      <H2>Some personal projects</H2>
-
-      <List>
-        <li>
-          <Link href="https://pengoe.hu">pengoe.hu</Link>
-          - shared wallet tracker app (in progress), HTMX, <Chip text="Go" filled={true} />
-        </li>
-        <li>
-          <Link href="https://peterszarvas.hu">peterszarvas.hu</Link>
-          - my personal portfolio, <Chip text="Astro.js" filled={true} />
-        </li>
-        <li>
-          <Link href="https://szeremletanc.hu">szeremletanc.hu</Link>
-          - dancegroup's website, Astro.js, Wordpress CMS
-        </li>
-        <li>
-          <Link href="https://pantlikazenekar.hu/">pantlikazekar.hu</Link>
-          - webpage for my music band, Astro.js
-        </li>
-        <li>
-          <Link href="https://weddingsite-xi.vercel.app/">
-            weddingsite-xi.vercel.app
-          </Link>
-          - online wedding invitation, React
-        </li>
-        <li>
-          <Link href="https://react-calculator-seven-theta.vercel.app/">
-            react-calculator-seven-theta.vercel.app
-          </Link> - simple calculator, React
-        </li>
-        <li>
-          <Link href="https://nextjs-fake-webshop.vercel.app/">
-            nextjs-fake-webshop.vercel.app
-          </Link> - fake webshop, <Chip text="Next.js" filled={true} />
-        </li>
-        <li>
-          <Link href="https://big-tac-toe.vercel.app/">
-            big-tac-toe.vercel.app
-          </Link>
-          - tic-tac-toe with multiple options, React
-        </li>
-      </List>
     </Article>
 
     <Article>
@@ -156,17 +111,17 @@ import Chip from "../components/resume/Chip.astro";
         <p>2024 february - present</p>
         <List>
           <li>
-            Creating a greenfield application for millions of users for a goverment
-            project
+            Creating a greenfield application for millions of users for a
+            goverment project
           </li>
           <li>
-            <Chip text="React" filled={true}/>
-            <Chip text="TypeScript" filled={true}/>
-            <Chip text="Node.js" filled={true}/>
-            <Chip text="HTML" /> 
+            <Chip text="React" filled={true} />
+            <Chip text="TypeScript" filled={true} />
+            <Chip text="Node.js" filled={true} />
+            <Chip text="HTML" />
             <Chip text="CSS" />
-            <Chip text="Material UI" filled={true}/>
-            <Chip text="Git" filled={true}/>
+            <Chip text="Material UI" filled={true} />
+            <Chip text="Git" filled={true} />
           </li>
         </List>
       </Section>
@@ -180,12 +135,12 @@ import Chip from "../components/resume/Chip.astro";
             business opportunities
           </li>
           <li>
-            <Chip text="React" /> 
-            <Chip text="JavaScript"/>
-            <Chip text="Node.js" /> 
-            <Chip text="HTML" /> 
-            <Chip text="CSS" /> 
-            <Chip text="Git" /> 
+            <Chip text="React" />
+            <Chip text="JavaScript" />
+            <Chip text="Node.js" />
+            <Chip text="HTML" />
+            <Chip text="CSS" />
+            <Chip text="Git" />
           </li>
         </List>
       </Section>
@@ -194,10 +149,61 @@ import Chip from "../components/resume/Chip.astro";
         <H3>Microsoft System Administrator @ IBM / Kyndryl</H3>
         <p>2020 - 2022</p>
         <List>
-          <li>Managing a hybrid could environment, with Windows servers and Microsoft Azure</li>
+          <li>
+            Managing a hybrid could environment, with Windows servers and
+            Microsoft Azure
+          </li>
           <li>PowerShell scripting for automation</li>
         </List>
       </Section>
+    </Article>
+
+    <Article>
+      <H2>Some personal projects</H2>
+
+      <List>
+        <li>
+          <Link href="https://peterszarvas.hu">peterszarvas.hu</Link>
+          - my personal portfolio, <Chip text="Tailwind CSS" filled={true} /> <Chip text="Astro.js" filled={true} />
+        </li>
+        <li>
+          <Link href="https://szeremletanc.hu">szeremletanc.hu</Link>
+          - dancegroup's website, Astro.js, Wordpress CMS
+        </li>
+        <li>
+          <Link href="https://pantlikazenekar.hu/">pantlikazekar.hu</Link>
+          - webpage for my music band, Astro.js
+        </li>
+        <li>
+          <Link href="https://nextjs-fake-webshop.vercel.app/">
+            nextjs-fake-webshop.vercel.app
+          </Link> - fake webshop, <Chip text="Next.js" filled={true} />
+        </li>
+        <li>
+          <Link href="https://pengoe.hu">pengoe.hu</Link>
+          - shared wallet tracker app (in progress), HTMX, <Chip
+            text="Go"
+            filled={true}
+          />
+        </li>
+        <li>
+          <Link href="https://weddingsite-xi.vercel.app/">
+            weddingsite-xi.vercel.app
+          </Link>
+          - online wedding invitation, React
+        </li>
+        <li>
+          <Link href="https://react-calculator-seven-theta.vercel.app/">
+            react-calculator-seven-theta.vercel.app
+          </Link> - simple calculator, React
+        </li>
+        <li>
+          <Link href="https://big-tac-toe.vercel.app/">
+            big-tac-toe.vercel.app
+          </Link>
+          - tic-tac-toe with multiple options, React
+        </li>
+      </List>
     </Article>
 
     <Article>
@@ -215,6 +221,5 @@ import Chip from "../components/resume/Chip.astro";
         <li>Upper-intermediate English knowledge</li>
       </List>
     </Article>
-
   </main>
 </Layout>
