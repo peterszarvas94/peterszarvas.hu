@@ -115,13 +115,15 @@ import Chip from "../components/resume/Chip.astro";
             goverment project
           </li>
           <li>
-            <Chip text="React" filled={true} />
-            <Chip text="TypeScript" filled={true} />
-            <Chip text="Node.js" filled={true} />
-            <Chip text="HTML" />
-            <Chip text="CSS" />
-            <Chip text="Material UI" filled={true} />
-            <Chip text="Git" filled={true} />
+            <div class="flex flex-wrap">
+              <Chip text="React" filled={true} />
+              <Chip text="TypeScript" filled={true} />
+              <Chip text="Node.js" filled={true} />
+              <Chip text="HTML" />
+              <Chip text="CSS" />
+              <Chip text="Material UI" filled={true} />
+              <Chip text="Git" filled={true} />
+            </div>
           </li>
         </List>
       </Section>
@@ -164,7 +166,8 @@ import Chip from "../components/resume/Chip.astro";
       <List>
         <li>
           <Link href="https://peterszarvas.hu">peterszarvas.hu</Link>
-          - my personal portfolio, <Chip text="Tailwind CSS" filled={true} /> <Chip text="Astro.js" filled={true} />
+          - my personal portfolio, <Chip text="Tailwind CSS" filled={true} />
+          <Chip text="Astro.js" filled={true} />
         </li>
         <li>
           <Link href="https://szeremletanc.hu">szeremletanc.hu</Link>
