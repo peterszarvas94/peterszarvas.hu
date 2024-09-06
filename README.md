@@ -1,8 +1,3 @@
-# Portfolio page of Szarvas Péter
+# portfolio old 2
 
-[https://peterszarvas.hu](https://peterszarvas.hu)
-
-Tech used:
-- Astro.js
-- TypeScript
-- Tailwind CSS
+archived, next is [portfolio](https://github.com/peterszarvas94/portfolio)
